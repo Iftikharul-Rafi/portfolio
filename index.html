@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>RAFI | Gerold – Web Developer & UX Designer | Projects</title>
+    <!-- Tailwind CSS v3 + Font Awesome Icons + Google Fonts (Inter) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: #0F0716;
+        }
+
+        .btn-hover {
+            transition: all 0.25s ease;
+        }
+
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+        }
+
+        .stat-card-hover {
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .stat-card-hover:hover {
+            transform: translateY(-3px);
+            background: #1f1530;
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #c084fc, #8b5cf6, #a78bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .glass-card-dark,
+        .glass-about,
+        .glass-services,
+        .glass-skills,
+        .glass-projects {
+            background: rgba(18, 12, 28, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .glass-about,
+        .glass-services,
+        .glass-skills,
+        .glass-projects {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .glass-about:hover,
+        .glass-services:hover,
+        .glass-skills:hover,
+        .glass-projects:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 30px 45px -12px rgba(139, 92, 246, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #C084FC, #8B5CF6, #A78BFA);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .open-to-work {
+            background: linear-gradient(95deg, #10B981, #059669);
+            box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .gradient-logo {
+            background: linear-gradient(135deg, #C084FC, #8B5CF6, #A78BFA);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(95deg, #8B5CF6, #C084FC);
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.5);
+            background: linear-gradient(95deg, #7C3AED, #B473F0);
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #C084FC;
+        }
+
+        .nav-sep {
+            color: #4B5563;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .mobile-menu-open {
+            max-height: 380px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-closed {
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .service-card,
+        .skill-category,
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover,
+        .skill-category:hover,
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tech-badge {
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #c084fc;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- ========== NAVBAR SECTION ========== -->
+    <div class="sticky top-0 z-50 backdrop-blur-sm bg-[#0F0716]/90 border-b border-indigo-900/30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+            <div class="flex items-center justify-between py-4 md:py-5">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-3xl md:text-4xl font-extrabold tracking-tight">
+                        <span class="gradient-logo">RAFI</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-2 lg:space-x-3 text-gray-200 font-medium">
+                    <a href="#" class="nav-link px-1 py-2 text-base lg:text-lg transition">About</a>
+                    <span class="nav-sep">›</span>
+                    <a href="#" class="nav-link px-1 py-2 text-base lg:text-lg transition">Service</a>
+                    <span class="nav-sep">›</span>
+                    <a href="#" class="nav-link px-1 py-2 text-base lg:text-lg transition">Skills</a>
+                    <span class="nav-sep">›</span>
+                    <a href="#" class="nav-link px-1 py-2 text-base lg:text-lg transition">Projects</a>
+                    <span class="nav-sep">›</span>
+                    <a href="#" class="nav-link px-1 py-2 text-base lg:text-lg transition">Experience</a>
+                    <span class="nav-sep">›</span>
+                    <a href="#" class="nav-link px-1 py-2 text-base lg:text-lg transition">Testimonials</a>
+                    <span class="nav-sep">›</span>
+                    <a href="#" class="nav-link px-1 py-2 text-base lg:text-lg transition">FAQ</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#"
+                        class="btn-gradient hidden sm:inline-block text-white font-semibold px-6 py-2.5 rounded-full shadow-lg transition-all duration-300 text-sm md:text-base">
+                        <i class="fas fa-paper-plane mr-2 text-white/90"></i> Contact
+                    </a>
+                    <a href="#"
+                        class="btn-gradient sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-full text-white">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <button id="mobileMenuButton"
+                        class="md:hidden text-gray-300 focus:outline-none text-2xl hover:text-indigo-400 transition">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobileMenu"
+                class="md:hidden overflow-hidden transition-all duration-300 ease-in-out mobile-menu-closed">
+                <div
+                    class="px-2 pt-2 pb-5 space-y-3 border-t border-indigo-900/30 bg-[#0F0716]/95 backdrop-blur-sm rounded-b-2xl">
+                    <a href="#"
+                        class="flex items-center justify-between py-2.5 px-3 text-gray-200 text-base font-medium hover:text-indigo-300 rounded-lg hover:bg-indigo-950/30 transition">
+                        <span>About</span> <i class="fas fa-chevron-right text-indigo-400 text-xs"></i>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between py-2.5 px-3 text-gray-200 text-base font-medium hover:text-indigo-300 rounded-lg hover:bg-indigo-950/30 transition">
+                        <span>Skills</span> <i class="fas fa-chevron-right text-indigo-400 text-xs"></i>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between py-2.5 px-3 text-gray-200 text-base font-medium hover:text-indigo-300 rounded-lg hover:bg-indigo-950/30 transition">
+                        <span>Projects</span> <i class="fas fa-chevron-right text-indigo-400 text-xs"></i>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between py-2.5 px-3 text-gray-200 text-base font-medium hover:text-indigo-300 rounded-lg hover:bg-indigo-950/30 transition">
+                        <span>Experience</span> <i class="fas fa-chevron-right text-indigo-400 text-xs"></i>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between py-2.5 px-3 text-gray-200 text-base font-medium hover:text-indigo-300 rounded-lg hover:bg-indigo-950/30 transition">
+                        <span>GitHub</span> <i class="fab fa-github text-indigo-400 text-sm"></i>
+                    </a>
+                    <div class="pt-3 mt-1">
+                        <a href="#"
+                            class="btn-gradient w-full text-center inline-block text-white font-semibold py-3 rounded-xl shadow-md transition-all duration-200">
+                            <i class="fas fa-paper-plane mr-2"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HERO SECTION (Gerold) ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12 md:py-20">
+        <div
+            class="glass-card-dark rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-900/20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center p-6 md:p-10 lg:p-12">
+                <div class="space-y-6 md:space-y-7">
+                    <div
+                        class="inline-flex items-center gap-2 bg-indigo-900/50 border border-indigo-500/30 text-indigo-200 px-4 py-1.5 rounded-full text-sm font-medium w-fit shadow-sm backdrop-blur-sm">
+                        <i class="fas fa-code text-indigo-300 text-xs"></i>
+                        <span>Creative Developer & UX Expert</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                        <span class="text-white">I am </span>
+                        <span class="text-gradient-gold">Gerold</span>
+                    </h1>
+                    <div class="inline-block">
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-gray-200 border-l-4 border-indigo-400 pl-4">
+                            Web Developer + UX Designer
+                        </h2>
+                    </div>
+                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-lg">
+                        Break down complex user experience problems into simple, straightforward tasks that can meet all
+                        forms of people.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#"
+                            class="btn-hover inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-400 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-indigo-900/30 transition-all duration-200">
+                            <i class="fas fa-calendar-check"></i> Book Now
+                        </a>
+                        <a href="#"
+                            class="btn-hover inline-flex items-center gap-2 bg-gray-800 border border-gray-700 hover:border-indigo-400 hover:bg-indigo-900/40 text-gray-200 font-semibold px-7 py-3.5 rounded-xl shadow-sm transition-all duration-200">
+                            <i class="fas fa-comment-dots text-indigo-400"></i> Live Chat
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 pt-4 border-t border-indigo-900/50 mt-2">
+                        <div
+                            class="stat-card-hover text-center sm:text-left bg-gray-900/40 backdrop-blur-sm p-3 rounded-2xl transition-all border border-gray-800">
+                            <div class="flex items-center justify-center sm:justify-start gap-2">
+                                <i class="fas fa-calendar-alt text-indigo-400 text-lg"></i>
+                                <div>
+                                    <p class="text-xl md:text-2xl font-extrabold text-white">14</p>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide">Years Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="stat-card-hover text-center sm:text-left bg-gray-900/40 backdrop-blur-sm p-3 rounded-2xl transition-all border border-gray-800">
+                            <div class="flex items-center justify-center sm:justify-start gap-2">
+                                <i class="fas fa-folder-open text-indigo-400 text-lg"></i>
+                                <div>
+                                    <p class="text-xl md:text-2xl font-extrabold text-white">50+</p>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide">Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="stat-card-hover text-center sm:text-left bg-gray-900/40 backdrop-blur-sm p-3 rounded-2xl transition-all border border-gray-800">
+                            <div class="flex items-center justify-center sm:justify-start gap-2">
+                                <i class="fas fa-users text-indigo-400 text-lg"></i>
+                                <div>
+                                    <p class="text-xl md:text-2xl font-extrabold text-white">1.5K</p>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide">Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="stat-card-hover text-center sm:text-left bg-gray-900/40 backdrop-blur-sm p-3 rounded-2xl transition-all border border-gray-800">
+                            <div class="flex items-center justify-center sm:justify-start gap-2">
+                                <i class="fas fa-star text-indigo-400 text-lg"></i>
+                                <div>
+                                    <p class="text-xl md:text-2xl font-extrabold text-white">14</p>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide">Reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center relative">
+                    <div
+                        class="relative rounded-2xl overflow-hidden shadow-2xl transform transition duration-300 hover:scale-[1.02]">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-600/20 rounded-2xl blur-2xl -z-10">
+                        </div>
+                        <img src="image/hero.png" alt="Gerold"
+                            class="w-full max-w-md lg:max-w-lg xl:max-w-md 2xl:max-w-lg object-cover rounded-2xl shadow-xl border border-indigo-500/30"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x600/1e1a2f/8b5cf6?text=hero.png'; this.classList.add('opacity-90');">
+                        <div
+                            class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md rounded-full px-3 py-1.5 text-xs font-semibold text-indigo-300 shadow-md flex items-center gap-1 border border-white/10">
+                            <i class="fas fa-mouse-pointer"></i> UI/UX focused
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative w-full h-0.5 bg-gradient-to-r from-indigo-500/40 via-purple-500/40 to-indigo-500/40">
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ABOUT ME SECTION ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-12 md:pb-20">
+        <div class="glass-about rounded-3xl overflow-hidden">
+            <div class="p-6 md:p-10 lg:p-12">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                    <div class="space-y-2">
+                        <div
+                            class="inline-flex items-center gap-2 bg-indigo-900/40 border border-indigo-500/30 text-indigo-200 px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm">
+                            <i class="fas fa-user-astronaut text-indigo-300 text-xs"></i>
+                            <span>Get to know me</span>
+                        </div>
+                        <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                            <span class="text-white">ABOUT.</span><span class="gradient-text">ME</span>
+                        </h2>
+                    </div>
+                    <div
+                        class="open-to-work inline-flex items-center gap-2 text-white font-semibold px-5 py-2 rounded-full shadow-lg">
+                        <i class="fas fa-briefcase-clock text-sm"></i>
+                        <span>open to work</span>
+                        <i class="fas fa-circle text-[8px] text-emerald-200 ml-1 animate-pulse"></i>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                    <div class="lg:col-span-3 space-y-6">
+                        <div>
+                            <p class="text-indigo-300 text-sm md:text-base font-medium tracking-wide mb-2">✦ Hello, I'm
+                            </p>
+                            <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">Abdullah Al
+                                Mahmud,<br><span class="gradient-text">Your Future Developer.</span></h3>
+                        </div>
+                        <div class="space-y-4 text-gray-300 text-base sm:text-lg leading-relaxed">
+                            <p><i class="fas fa-quote-left text-indigo-400/40 mr-2 text-sm"></i> My coding journey
+                                started with pure curiosity — wondering what really happens behind a click on a website.
+                                Where does it go? What runs under the hood? That question had no clear answer for me,
+                                until I joined Programming Hero Bootcamp and found my path.</p>
+                            <p>The learning days weren't easy — hours of coding, debugging, failing, then finally
+                                succeeding. Now I'm designing my own portfolio from scratch and have completed 10+
+                                projects. Today I'm confident — I know the magic that client, server, and database can
+                                create together.</p>
+                            <div class="flex items-center gap-3 pt-2">
+                                <div class="h-px flex-1 bg-gradient-to-r from-indigo-500/30 to-transparent"></div><span
+                                    class="text-indigo-300 text-sm italic">I'm just one message away — message
+                                    me!</span>
+                                <div class="h-px flex-1 bg-gradient-to-l from-indigo-500/30 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="pt-4"><a href="#"
+                                class="inline-flex items-center gap-2 bg-indigo-600/20 hover:bg-indigo-600/40 border border-indigo-500/40 text-indigo-200 font-medium px-5 py-2.5 rounded-xl transition-all duration-200"><i
+                                    class="fas fa-paper-plane"></i> Let's talk <i
+                                    class="fas fa-arrow-right text-xs"></i></a></div>
+                    </div>
+                    <div class="lg:col-span-2 space-y-5">
+                        <div class="bg-gray-900/50 rounded-2xl p-5 border border-indigo-800/30">
+                            <div class="flex items-center gap-3 mb-3"><i
+                                    class="fas fa-laptop-code text-2xl text-indigo-400"></i>
+                                <h4 class="text-white font-semibold text-lg">Journey highlights</h4>
+                            </div>
+                            <ul class="space-y-3 text-gray-300 text-sm">
+                                <li class="flex items-center gap-2"><i
+                                        class="fas fa-check-circle text-emerald-500 text-xs"></i> <span>Programming Hero
+                                        Bootcamp graduate</span></li>
+                                <li class="flex items-center gap-2"><i
+                                        class="fas fa-check-circle text-emerald-500 text-xs"></i> <span>10+ real-world
+                                        projects completed</span></li>
+                                <li class="flex items-center gap-2"><i
+                                        class="fas fa-check-circle text-emerald-500 text-xs"></i> <span>Full‑stack
+                                        enthusiast (MERN + Python)</span></li>
+                                <li class="flex items-center gap-2"><i
+                                        class="fas fa-check-circle text-emerald-500 text-xs"></i> <span>Building
+                                        portfolio from scratch</span></li>
+                            </ul>
+                        </div>
+                        <div
+                            class="bg-gradient-to-r from-indigo-950/40 to-purple-950/40 rounded-2xl p-4 border border-indigo-800/30 text-center">
+                            <i class="fas fa-code text-indigo-300 text-2xl mb-2 block"></i>
+                            <p class="text-gray-300 text-sm">“Curiosity turned into code — <br> and every bug makes me
+                                stronger.”</p>
+                            <div class="flex justify-center gap-2 mt-3"><span
+                                    class="w-2 h-2 rounded-full bg-indigo-400"></span><span
+                                    class="w-2 h-2 rounded-full bg-purple-400"></span><span
+                                    class="w-2 h-2 rounded-full bg-indigo-400"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-8 pt-4 border-t border-indigo-900/40 flex flex-wrap justify-between items-center text-sm text-gray-400">
+                    <div class="flex items-center gap-2"><i class="fab fa-github"></i>
+                        <span>github/abdullah-dev</span><span class="hidden sm:inline">•</span><i
+                            class="fab fa-linkedin ml-0 sm:ml-2"></i> <span>in/abdullah-mahmud</span>
+                    </div>
+                    <div class="text-indigo-300 text-xs flex items-center gap-1"><i class="fas fa-envelope"></i>
+                        abdullah@future.dev</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MY QUALITY SERVICES SECTION ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-12 md:pb-20">
+        <div class="glass-services rounded-3xl overflow-hidden">
+            <div class="p-6 md:p-10 lg:p-12">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <div
+                        class="inline-flex items-center gap-2 bg-indigo-900/40 border border-indigo-500/30 text-indigo-200 px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm mb-4">
+                        <i class="fas fa-cog text-indigo-300 text-xs"></i>
+                        <span>What I Do</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+                        <span class="text-white">My Quality</span>
+                        <span class="gradient-text"> Services</span>
+                    </h2>
+                    <p class="text-gray-400 mt-4 text-base sm:text-lg max-w-xl mx-auto">
+                        We put your ideas and thus your wishes in the form of a unique web project that inspires you and
+                        your customers.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="service-card bg-gray-900/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/50">
+                        <div class="text-4xl font-bold text-indigo-400 mb-4">01</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Web Development</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Conducting qualitative and quantitative
+                            research to understand user needs, behaviors, and pain points. Utilizing methods...</p>
+                        <div class="mt-4"><a href="#"
+                                class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium">Learn
+                                more <i class="fas fa-arrow-right ml-1 text-xs"></i></a></div>
+                    </div>
+                    <div
+                        class="service-card bg-gray-900/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/50">
+                        <div class="text-4xl font-bold text-indigo-400 mb-4">02</div>
+                        <h3 class="text-xl font-bold text-white mb-3">UI/UX Design</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Conducting qualitative and quantitative
+                            research to understand user needs, behaviors, and pain points. Utilising methods...</p>
+                        <div class="mt-4"><a href="#"
+                                class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium">Learn
+                                more <i class="fas fa-arrow-right ml-1 text-xs"></i></a></div>
+                    </div>
+                    <div
+                        class="service-card bg-gray-900/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/50">
+                        <div class="text-4xl font-bold text-indigo-400 mb-4">03</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Content Writing</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Conducting qualitative and quantitative
+                            research to understand user needs, behaviors, and pain points. Utilizing methods...</p>
+                        <div class="mt-4"><a href="#"
+                                class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium">Learn
+                                more <i class="fas fa-arrow-right ml-1 text-xs"></i></a></div>
+                    </div>
+                    <div
+                        class="service-card bg-gray-900/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/50">
+                        <div class="text-4xl font-bold text-indigo-400 mb-4">04</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Digital Marketing</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Conducting qualitative and quantitative
+                            research to understand user needs, behaviors, and pain points. Utilising methods...</p>
+                        <div class="mt-4"><a href="#"
+                                class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium">Learn
+                                more <i class="fas fa-arrow-right ml-1 text-xs"></i></a></div>
+                    </div>
+                </div>
+                <div class="text-center text-gray-500 text-xs mt-8"><i class="fas fa-chalkboard-user mr-1"></i> Tailored
+                    solutions for modern businesses</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TECHNOLOGY & SKILLS SECTION ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-12 md:pb-20">
+        <div class="glass-skills rounded-3xl overflow-hidden">
+            <div class="p-6 md:p-10 lg:p-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                        <span class="text-white">Technology</span>
+                        <span class="gradient-text"> & Skills</span>
+                    </h2>
+                    <div class="flex items-center justify-center gap-2 mt-2 text-indigo-300/70 font-mono text-sm">
+                        <span class="text-gray-500">//</span> my current skill set – always expanding
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="skill-category bg-gray-900/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/50">
+                        <div class="flex items-center gap-2 mb-3"><i
+                                class="fas fa-laptop-code text-indigo-400 text-xl"></i>
+                            <h3 class="text-2xl font-bold text-white">Frontend</h3>
+                        </div>
+                        <div class="font-mono text-indigo-300/70 text-xs mb-4">// what the user sees</div>
+                        <ul class="skill-list space-y-3 text-gray-300">
+                            <li><i class="fas fa-angle-right"></i> HTML</li>
+                            <li><i class="fas fa-angle-right"></i> CSS</li>
+                            <li><i class="fas fa-angle-right"></i> JavaScript</li>
+                            <li><i class="fas fa-angle-right"></i> React</li>
+                            <li><i class="fas fa-angle-right"></i> Next.js</li>
+                            <li><i class="fas fa-angle-right"></i> Tailwind CSS</li>
+                            <li><i class="fas fa-angle-right"></i> DaisyUI</li>
+                            <li><i class="fas fa-angle-right"></i> HeroUI</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="skill-category bg-gray-900/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/50">
+                        <div class="flex items-center gap-2 mb-3"><i class="fas fa-server text-indigo-400 text-xl"></i>
+                            <h3 class="text-2xl font-bold text-white">Backend & Database</h3>
+                        </div>
+                        <div class="font-mono text-indigo-300/70 text-xs mb-4">// what runs under the hood</div>
+                        <ul class="skill-list space-y-3 text-gray-300">
+                            <li><i class="fas fa-angle-right"></i> Node.js</li>
+                            <li><i class="fas fa-angle-right"></i> Express</li>
+                            <li><i class="fas fa-angle-right"></i> MongoDB</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="skill-category bg-gray-900/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/50">
+                        <div class="flex items-center gap-2 mb-3"><i
+                                class="fas fa-cloud-upload-alt text-indigo-400 text-xl"></i>
+                            <h3 class="text-2xl font-bold text-white">Auth & Deployment</h3>
+                        </div>
+                        <div class="font-mono text-indigo-300/70 text-xs mb-4">// ship it to the world</div>
+                        <ul class="skill-list space-y-3 text-gray-300">
+                            <li><i class="fas fa-angle-right"></i> Better Auth</li>
+                            <li><i class="fas fa-angle-right"></i> Google OAuth</li>
+                            <li><i class="fas fa-angle-right"></i> Vercel</li>
+                            <li><i class="fas fa-angle-right"></i> Netlify</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center text-gray-500 text-xs mt-10"><i class="fas fa-code-branch mr-1"></i>
+                    continuously learning & expanding</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== THINGS I'VE BUILT (PROJECT SECTION) ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-12 md:pb-20">
+        <div class="glass-projects rounded-3xl overflow-hidden">
+            <div class="p-6 md:p-10 lg:p-12">
+                <!-- section header -->
+                <div class="text-center mb-10">
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                        <span class="text-white">Things I've</span>
+                        <span class="gradient-text"> Built</span>
+                    </h2>
+                    <div class="flex items-center justify-center gap-2 mt-2 text-indigo-300/70 font-mono text-sm">
+                        <span class="text-gray-500">//</span> 18 projects - showing 1-6
+                    </div>
+                </div>
+
+                <!-- project grid (2 columns on md, 3 on lg) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Project 1: QurbaniHat -->
+                    <div
+                        class="project-card bg-gray-900/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/60">
+                        <img src="image/project01.jpg" alt="QurbaniHat" class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/600x400/1e1a2f/8b5cf6?text=QurbaniHat'">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-white mb-2">QurbaniHat</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">QurbaniHat is a full-stack online
+                                livestock booking platform built for Eid ul-Adha, making it easier than ever for people
+                                in Bangladesh to find and book their Qurbani animals online.</p>
+                            <div class="flex flex-wrap gap-2 mb-4"><span class="tech-badge">Next.js</span><span
+                                    class="tech-badge">Tailwind CSS</span><span class="tech-badge">DaisyUI</span><span
+                                    class="tech-badge">Haval</span><span class="tech-badge">Vercel</span></div>
+                            <div class="flex gap-3"><a href="#"
+                                    class="text-indigo-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fas fa-external-link-alt mr-1"></i>Live</a><a href="#"
+                                    class="text-gray-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fab fa-github mr-1"></i>GitHub</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Bake and Cook -->
+                    <div
+                        class="project-card bg-gray-900/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/60">
+                        <img src="image/project02.jpg" alt="Bake and Cook" class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/600x400/1e1a2f/8b5cf6?text=Bake+and+Cook'">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-white mb-2">Bake and Cook</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">I recently built a food ordering web
+                                application where users can browse meals, explore recipes, and manage their cart — all
+                                in one place.</p>
+                            <div class="flex flex-wrap gap-2 mb-4"><span class="tech-badge">Next.js</span><span
+                                    class="tech-badge">Tailwind CSS</span><span class="tech-badge">Mozilla</span><span
+                                    class="tech-badge">Vercel</span></div>
+                            <div class="flex gap-3"><a href="#"
+                                    class="text-indigo-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fas fa-external-link-alt mr-1"></i>Live</a><a href="#"
+                                    class="text-gray-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fab fa-github mr-1"></i>GitHub</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Dragon News -->
+                    <div
+                        class="project-card bg-gray-900/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/60">
+                        <img src="image/project03.jpg" alt="Dragon News" class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/600x400/1e1a2f/8b5cf6?text=Dragon+News'">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-white mb-2">Dragon News</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">In this project I focused on
+                                integrating Better Auth with Next.js and MongoDB — getting comfortable with sign up, log
+                                in, log out, session management, and protected routes in a real app environment.</p>
+                            <div class="flex flex-wrap gap-2 mb-4"><span class="tech-badge">Next.js</span><span
+                                    class="tech-badge">Tailwind CSS</span><span class="tech-badge">DaisyUI</span><span
+                                    class="tech-badge">Mozilla</span><span class="tech-badge">Vercel</span></div>
+                            <div class="flex gap-3"><a href="#"
+                                    class="text-indigo-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fas fa-external-link-alt mr-1"></i>Live</a><a href="#"
+                                    class="text-gray-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fab fa-github mr-1"></i>GitHub</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Digitool -->
+                    <div
+                        class="project-card bg-gray-900/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/60">
+                        <img src="image/project04.jpg" alt="Digitool" class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/600x400/1e1a2f/8b5cf6?text=Digitool'">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-white mb-2">Digitool</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">Digitool is service marketplace
+                                designed to make buying digital products safer and easier. My goal was to create a
+                                reliable, user-friendly solution where users can confidently explore and purchase
+                                digital services.</p>
+                            <div class="flex flex-wrap gap-2 mb-4"><span class="tech-badge">React</span><span
+                                    class="tech-badge">JavaScript (ES6)</span><span class="tech-badge">HTML</span><span
+                                    class="tech-badge">Tailwind CSS</span><span class="tech-badge">Balsamiq</span><span
+                                    class="tech-badge">React Testing App</span><span class="tech-badge">300+
+                                    Pages</span></div>
+                            <div class="flex gap-3"><a href="#"
+                                    class="text-indigo-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fas fa-external-link-alt mr-1"></i>Live</a><a href="#"
+                                    class="text-gray-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fab fa-github mr-1"></i>GitHub</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Book vibe -->
+                    <div
+                        class="project-card bg-gray-900/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/60">
+                        <img src="image/project05.jpg" alt="Book Vibe" class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/600x400/1e1a2f/8b5cf6?text=Book+Vibe'">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-white mb-2">Book vibe</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">Introducing Book Vibe, A simple way to
+                                track your reading journey. I recently built Book Vibe, a reading management web app
+                                designed to help users organize and track their books in a clean and intuitive way.</p>
+                            <div class="flex flex-wrap gap-2 mb-4"><span class="tech-badge">JavaScript</span><span
+                                    class="tech-badge">React.js</span><span class="tech-badge">Tailwind CSS</span><span
+                                    class="tech-badge">DaisyUI</span></div>
+                            <div class="flex gap-3"><a href="#"
+                                    class="text-indigo-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fas fa-external-link-alt mr-1"></i>Live</a><a href="#"
+                                    class="text-gray-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fab fa-github mr-1"></i>GitHub</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: AI Hub -->
+                    <div
+                        class="project-card bg-gray-900/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-indigo-800/30 transition-all duration-300 hover:bg-gray-900/60">
+                        <img src="image/project06.jpg" alt="AI Hub" class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/600x400/1e1a2f/8b5cf6?text=AI+Hub'">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-white mb-2">AI Hub</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">It is an interactive web application
+                                designed to help users explore and purchase a wide range of AI tools. The platform
+                                fetches real-time data from APIs and presents AI products in a clean, user-friendly
+                                interface.</p>
+                            <div class="flex flex-wrap gap-2 mb-4"><span class="tech-badge">JavaScript</span><span
+                                    class="tech-badge">React.js</span><span class="tech-badge">Tailwind CSS</span><span
+                                    class="tech-badge">DaisyUI</span></div>
+                            <div class="flex gap-3"><a href="#"
+                                    class="text-indigo-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fas fa-external-link-alt mr-1"></i>Live</a><a href="#"
+                                    class="text-gray-400 hover:text-indigo-300 text-sm font-medium"><i
+                                        class="fab fa-github mr-1"></i>GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-gray-500 text-xs mt-10"><i class="fas fa-archive mr-1"></i> more projects
+                    coming soon — always building</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background abstract shapes -->
+    <div class="fixed inset-0 -z-50 pointer-events-none overflow-hidden">
+        <div class="absolute top-20 left-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-[32rem] h-[32rem] bg-purple-700/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/3 right-1/4 w-80 h-80 bg-fuchsia-800/5 rounded-full blur-2xl"></div>
+    </div>
+
+
+    <!-- ========== MY EXPERIENCE & EDUCATION SECTION ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-12 md:pb-20">
+        <div class="glass-projects rounded-3xl overflow-hidden"> <!-- reusing glass-projects class -->
+            <div class="p-6 md:p-10 lg:p-12">
+
+                <!-- two column grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+
+                    <!-- LEFT COLUMN: My Experience -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="fas fa-briefcase text-indigo-400 text-2xl"></i>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">My Experience</h2>
+                        </div>
+                        <div class="space-y-5">
+                            <!-- Experience 1 -->
+                            <div class="border-l-2 border-indigo-500 pl-4 hover:border-indigo-300 transition">
+                                <div class="flex flex-wrap justify-between items-baseline gap-2">
+                                    <span class="text-indigo-300 font-mono text-sm">2022 — Present</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mt-1">LEAD DEVELOPER</h3>
+                                <p class="text-gray-400 text-sm">Blockdots, London</p>
+                            </div>
+                            <!-- Experience 2 -->
+                            <div class="border-l-2 border-indigo-500/60 pl-4 hover:border-indigo-300 transition">
+                                <div class="flex flex-wrap justify-between items-baseline gap-2">
+                                    <span class="text-indigo-300 font-mono text-sm">2021 — 2022</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mt-1">FULL STACK WEB DEVELOPER</h3>
+                                <p class="text-gray-400 text-sm">Parsons, The New School</p>
+                            </div>
+                            <!-- Experience 3 -->
+                            <div class="border-l-2 border-indigo-500/60 pl-4 hover:border-indigo-300 transition">
+                                <div class="flex flex-wrap justify-between items-baseline gap-2">
+                                    <span class="text-indigo-300 font-mono text-sm">2020 — 2021</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mt-1">UI DESIGNER</h3>
+                                <p class="text-gray-400 text-sm">House of Life, Leeds</p>
+                            </div>
+                            <!-- Experience 4 -->
+                            <div class="border-l-2 border-indigo-500/60 pl-4 hover:border-indigo-300 transition">
+                                <div class="flex flex-wrap justify-between items-baseline gap-2">
+                                    <span class="text-indigo-300 font-mono text-sm">2018 — 2020</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mt-1">JUNIOR GRAPHICS DESIGNER</h3>
+                                <p class="text-gray-400 text-sm">Theme Junction, Bursa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: My Education -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="fas fa-graduation-cap text-indigo-400 text-2xl"></i>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">My Education</h2>
+                        </div>
+                        <div class="space-y-5">
+                            <!-- Education 1 -->
+                            <div class="border-l-2 border-purple-500 pl-4 hover:border-purple-300 transition">
+                                <div class="flex flex-wrap justify-between items-baseline gap-2">
+                                    <span class="text-purple-300 font-mono text-sm">2020 — 2023</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mt-1">PROGRAMMING COURSE</h3>
+                                <p class="text-gray-400 text-sm">Harvard University</p>
+                            </div>
+                            <!-- Education 2 -->
+                            <div class="border-l-2 border-purple-500/60 pl-4 hover:border-purple-300 transition">
+                                <div class="flex flex-wrap justify-between items-baseline gap-2">
+                                    <span class="text-purple-300 font-mono text-sm">2016 — 2020</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mt-1">GRAPHIC DESIGN COURSE</h3>
+                                <p class="text-gray-400 text-sm">University of Denmark</p>
+                            </div>
+                            <!-- Education 3 -->
+                            <div class="border-l-2 border-purple-500/60 pl-4 hover:border-purple-300 transition">
+                                <div class="flex flex-wrap justify-between items-baseline gap-2">
+                                    <span class="text-purple-300 font-mono text-sm">2012 — 2015</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mt-1">WEB DESIGN COURSE</h3>
+                                <p class="text-gray-400 text-sm">University of California</p>
+                            </div>
+                            <!-- Education 4 -->
+                            <div class="border-l-2 border-purple-500/60 pl-4 hover:border-purple-300 transition">
+                                <div class="flex flex-wrap justify-between items-baseline gap-2">
+                                    <span class="text-purple-300 font-mono text-sm">2010 — 2011</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mt-1">DESIGN & TECHNOLOGY</h3>
+                                <p class="text-gray-400 text-sm">Parsons, The New School</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- optional footnote -->
+                <div class="text-center text-gray-500 text-xs mt-10 pt-4 border-t border-indigo-900/40">
+                    <i class="fas fa-timeline mr-1"></i> continuous learning & professional growth
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-12 md:pb-20">
+        <div class="glass-projects rounded-3xl overflow-hidden">
+            <div class="p-6 md:p-10 lg:p-12">
+
+                <!-- Header with breadcrumb -->
+                <div class="text-center mb-8">
+                    <div
+                        class="inline-flex items-center gap-2 bg-indigo-900/40 border border-indigo-500/30 text-indigo-200 px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm mb-3">
+                        <i class="fas fa-comment-dots text-indigo-300 text-xs"></i>
+                        <span>What People Say</span>
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                        <span class="text-white">Testi</span><span class="gradient-text">monials</span>
+                    </h2>
+                    <div class="flex items-center justify-center gap-2 mt-2 text-gray-400 text-sm">
+                        <a href="#" class="hover:text-indigo-400 transition">Home</a>
+                        <i class="fas fa-chevron-right text-xs text-gray-600"></i>
+                        <span class="text-indigo-300">Testimonials</span>
+                    </div>
+                </div>
+
+                <!-- Filter Tabs (Web Design, App Design, Dashboard, Wireframe) -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <button
+                        class="px-5 py-2 rounded-full bg-indigo-600/80 text-white font-medium text-sm shadow-md transition-all hover:bg-indigo-500">Web
+                        Design</button>
+                    <button
+                        class="px-5 py-2 rounded-full bg-gray-800/80 text-gray-300 font-medium text-sm transition-all hover:bg-indigo-900/50 hover:text-indigo-200">App
+                        Design</button>
+                    <button
+                        class="px-5 py-2 rounded-full bg-gray-800/80 text-gray-300 font-medium text-sm transition-all hover:bg-indigo-900/50 hover:text-indigo-200">Dashboard</button>
+                    <button
+                        class="px-5 py-2 rounded-full bg-gray-800/80 text-gray-300 font-medium text-sm transition-all hover:bg-indigo-900/50 hover:text-indigo-200">Wireframe</button>
+                </div>
+
+                <!-- Client Testimonials heading -->
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white">Client Testimonials</h3>
+                    <p class="text-gray-400 mt-2 text-sm">Testimonials that Speaks to My Results</p>
+                    <div class="w-20 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-3"></div>
+                </div>
+
+                <!-- Testimonials Grid (2 columns on md, 3 on lg) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Testimonial 1: Leslie Alexander -->
+                    <div
+                        class="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-5 border border-indigo-800/30 transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-indigo-500/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                                LA</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Leslie Alexander</h4>
+                                <p class="text-gray-400 text-xs">CEO, Software Company</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 text-xs ml-2">5.0</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Sed ut perspiciatis unde omnis iste natus error
+                            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+                    </div>
+
+                    <!-- Testimonial 2: Dianne Russell -->
+                    <div
+                        class="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-5 border border-indigo-800/30 transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-indigo-500/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                                DR</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Dianne Russell</h4>
+                                <p class="text-gray-400 text-xs">CEO, Event Booking App</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 text-xs ml-2">5.0</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Sed ut perspiciatis unde omnis iste natus error
+                            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+                    </div>
+
+                    <!-- Testimonial 3: Kathryn Murphy -->
+                    <div
+                        class="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-5 border border-indigo-800/30 transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-indigo-500/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                                KM</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Kathryn Murphy</h4>
+                                <p class="text-gray-400 text-xs">CEO, Coffee Shop App</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 text-xs ml-2">5.0</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Sed ut perspiciatis unde omnis iste natus error
+                            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+                    </div>
+
+                    <!-- Testimonial 4: Robert Fox -->
+                    <div
+                        class="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-5 border border-indigo-800/30 transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-indigo-500/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                                RF</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Robert Fox</h4>
+                                <p class="text-gray-400 text-xs">CEO, Pet Food App</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 text-xs ml-2">5.0</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Sed ut perspiciatis unde omnis iste natus error
+                            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+                    </div>
+
+                    <!-- Testimonial 5: Sophia Anderson -->
+                    <div
+                        class="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-5 border border-indigo-800/30 transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-indigo-500/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                                SA</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Sophia Anderson</h4>
+                                <p class="text-gray-400 text-xs">CEO, Flower Shop App</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 text-xs ml-2">5.0</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Sed ut perspiciatis unde omnis iste natus error
+                            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+                    </div>
+
+                    <!-- Testimonial 6: Olivia Miller -->
+                    <div
+                        class="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-5 border border-indigo-800/30 transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-indigo-500/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                                OM</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Olivia Miller</h4>
+                                <p class="text-gray-400 text-xs">Owner, Jewelry Store</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 text-xs ml-2">5.0</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Sed ut perspiciatis unde omnis iste natus error
+                            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+                    </div>
+
+                    <!-- Testimonial 7: Evelyn Clark -->
+                    <div
+                        class="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-5 border border-indigo-800/30 transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-indigo-500/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                                EC</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Evelyn Clark</h4>
+                                <p class="text-gray-400 text-xs">CEO, E-Learning App</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 text-xs ml-2">5.0</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Sed ut perspiciatis unde omnis iste natus error
+                            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+                    </div>
+
+                    <!-- Testimonial 8: Ava Wilson -->
+                    <div
+                        class="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-5 border border-indigo-800/30 transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-indigo-500/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                                AW</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Ava Wilson</h4>
+                                <p class="text-gray-400 text-xs">CEO, Clothing Store App</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 text-xs ml-2">5.0</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Sed ut perspiciatis unde omnis iste natus error
+                            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action Banner -->
+                <div
+                    class="mt-12 bg-gradient-to-r from-indigo-900/40 to-purple-900/40 rounded-2xl p-8 text-center border border-indigo-500/30 backdrop-blur-sm">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white">Let's Create an Amazing Project Together!</h3>
+                    <p class="text-gray-300 mt-2 mb-5">Ready to bring your ideas to life? Let's collaborate and build
+                        something extraordinary.</p>
+                    <a href="#"
+                        class="btn-gradient inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+                        Start a Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- bottom note -->
+                <div class="text-center text-gray-500 text-xs mt-8">
+                    <i class="fas fa-heart text-indigo-400 mr-1"></i> loved by clients worldwide
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ========== FAQ SECTION (ACCORDION) ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-12 md:pb-20">
+        <div class="glass-projects rounded-3xl overflow-hidden">
+            <div class="p-6 md:p-10 lg:p-12">
+
+                <!-- Header area -->
+                <div class="text-center mb-10">
+                    <div
+                        class="inline-flex items-center gap-2 bg-indigo-900/40 border border-indigo-500/30 text-indigo-200 px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm mb-3">
+                        <i class="fas fa-question-circle text-indigo-300 text-xs"></i>
+                        <span>Knowledge Base</span>
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                        <span class="text-white">OUR</span>
+                        <span class="gradient-text"> FAQ</span>
+                    </h2>
+                    <p class="text-gray-400 mt-3 text-lg">How Can We Help You?</p>
+                    <div class="w-20 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-4"></div>
+                </div>
+
+                <!-- FAQ Accordion Grid (left/right split optional, but list style) -->
+                <div class="max-w-3xl mx-auto">
+                    <!-- FAQ Item 1 (open by default) -->
+                    <div class="faq-item border-b border-indigo-800/40 mb-1">
+                        <button
+                            class="faq-question w-full flex justify-between items-center py-5 text-left focus:outline-none group">
+                            <span class="text-white font-semibold text-lg">What is included with my purchase?</span>
+                            <span
+                                class="faq-icon text-indigo-400 text-xl transition-transform duration-300 transform rotate-0">
+                                <i class="fas fa-minus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-gray-300 leading-relaxed">
+                                Your purchase includes full access to all theme files, documentation, lifetime updates,
+                                and 6 months of premium support. You'll also get exclusive demo content and design
+                                assets.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item border-b border-indigo-800/40 mb-1">
+                        <button
+                            class="faq-question w-full flex justify-between items-center py-5 text-left focus:outline-none group">
+                            <span class="text-white font-semibold text-lg">Are there any recurring fees?</span>
+                            <span class="faq-icon text-indigo-400 text-xl transition-transform duration-300">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-gray-300 leading-relaxed">
+                                No, there are no recurring fees. You pay once and get lifetime access to the theme.
+                                Support renewals are optional after the first 6 months.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item border-b border-indigo-800/40 mb-1">
+                        <button
+                            class="faq-question w-full flex justify-between items-center py-5 text-left focus:outline-none group">
+                            <span class="text-white font-semibold text-lg">Do I need any premium plugin?</span>
+                            <span class="faq-icon text-indigo-400 text-xl transition-transform duration-300">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-gray-300 leading-relaxed">
+                                No premium plugins are required. Our theme works perfectly with free plugins and
+                                includes all necessary functionality out of the box.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item border-b border-indigo-800/40 mb-1">
+                        <button
+                            class="faq-question w-full flex justify-between items-center py-5 text-left focus:outline-none group">
+                            <span class="text-white font-semibold text-lg">What kind of support do you offer?</span>
+                            <span class="faq-icon text-indigo-400 text-xl transition-transform duration-300">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-gray-300 leading-relaxed">
+                                We offer 24/7 ticket support, detailed documentation, video tutorials, and a dedicated
+                                support team to help you with any issues.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item border-b border-indigo-800/40 mb-1">
+                        <button
+                            class="faq-question w-full flex justify-between items-center py-5 text-left focus:outline-none group">
+                            <span class="text-white font-semibold text-lg">Do you provide customization?</span>
+                            <span class="faq-icon text-indigo-400 text-xl transition-transform duration-300">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-gray-300 leading-relaxed">
+                                Yes, we offer custom design and development services. Contact us with your requirements
+                                for a personalized quote.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item border-b border-indigo-800/40 mb-1">
+                        <button
+                            class="faq-question w-full flex justify-between items-center py-5 text-left focus:outline-none group">
+                            <span class="text-white font-semibold text-lg">Is this RTL theme?</span>
+                            <span class="faq-icon text-indigo-400 text-xl transition-transform duration-300">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-gray-300 leading-relaxed">
+                                Yes, Gerold is fully RTL-ready. You can enable RTL mode with one click and it works
+                                perfectly for Arabic, Hebrew, and other RTL languages.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="faq-item border-b border-indigo-800/40 mb-1">
+                        <button
+                            class="faq-question w-full flex justify-between items-center py-5 text-left focus:outline-none group">
+                            <span class="text-white font-semibold text-lg">Can I translate Gerold?</span>
+                            <span class="faq-icon text-indigo-400 text-xl transition-transform duration-300">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-gray-300 leading-relaxed">
+                                Absolutely! Gerold includes .pot files for easy translation with Loco Translate or any
+                                WordPress translation plugin. You can also translate manually.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="faq-item border-b border-indigo-800/40 mb-1">
+                        <button
+                            class="faq-question w-full flex justify-between items-center py-5 text-left focus:outline-none group">
+                            <span class="text-white font-semibold text-lg">Why should I trust Theme Junction?</span>
+                            <span class="faq-icon text-indigo-400 text-xl transition-transform duration-300">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-gray-300 leading-relaxed">
+                                Theme Junction has been a trusted marketplace for over 10 years, with thousands of
+                                satisfied customers, 5-star ratings, and regular updates.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extras & CTA Banner -->
+                <div class="mt-14 pt-6 text-center">
+                    <div
+                        class="inline-block px-4 py-1.5 bg-indigo-900/30 rounded-full text-indigo-300 text-xs font-mono mb-4">
+                        <i class="fas fa-gem mr-1"></i> EXTRAS, UPDATES, AND TOP-TIER SUPPORT
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Join Thousands of Satisfied Customers
+                        Here!</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="#"
+                            class="btn-gradient inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+                            Try Our Demos <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 hover:bg-indigo-700 border border-indigo-500/50 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+                            Purchase Now <i class="fas fa-shopping-cart ml-1"></i>
+                        </a>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-indigo-900/40 text-gray-500 text-xs">
+                        © 2025 ALL RIGHTS RESERVED BY THEME JUNCTION
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ========== CONTACT ME SECTION ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-12 md:pb-20">
+        <div class="glass-projects rounded-3xl overflow-hidden">
+            <div class="p-6 md:p-10 lg:p-12">
+
+                <!-- Header -->
+                <div class="text-center mb-10">
+                    <div
+                        class="inline-flex items-center gap-2 bg-indigo-900/40 border border-indigo-500/30 text-indigo-200 px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm mb-3">
+                        <i class="fas fa-envelope text-indigo-300 text-xs"></i>
+                        <span>Get in Touch</span>
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                        <span class="text-white">CONTACT</span>
+                        <span class="gradient-text"> ME</span>
+                    </h2>
+                    <div class="flex items-center justify-center gap-2 mt-2 text-indigo-300/70 font-mono text-sm">
+                        <span class="text-gray-500">//</span> I'm just one message away
+                    </div>
+                </div>
+
+                <!-- Main two-column grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+
+                    <!-- LEFT COLUMN: Availability + Contact Info -->
+                    <div>
+                        <!-- Availability badge + location -->
+                        <div class="mb-8">
+                            <div class="flex flex-wrap items-center gap-3 mb-3">
+                                <span class="text-white font-bold text-xl">CURRENTLY AVAILABLE FOR</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3 mb-3">
+                                <span
+                                    class="px-4 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium border border-emerald-500/30">Full-time</span>
+                                <span
+                                    class="px-4 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium border border-emerald-500/30">Freelance</span>
+                                <span
+                                    class="px-4 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium border border-emerald-500/30">Intern</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <i class="fas fa-map-marker-alt text-indigo-400"></i>
+                                <span>Dhaka, Bangladesh</span>
+                            </div>
+                        </div>
+
+                        <!-- Contact Details List -->
+                        <div class="space-y-5">
+                            <!-- Email -->
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-indigo-900/40 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm font-mono">EMAIL</p>
+                                    <p class="text-white font-medium">citclassamhud@gmail.com</p>
+                                    <p class="text-gray-500 text-xs">Reply without labels</p>
+                                </div>
+                            </div>
+                            <!-- Website / Phone -->
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-indigo-900/40 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-globe text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm font-mono">WEBSITE</p>
+                                    <p class="text-white font-medium">+880 1683 367535</p>
+                                    <p class="text-gray-500 text-xs">Reply without labels</p>
+                                </div>
+                            </div>
+                            <!-- LinkedIn -->
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-indigo-900/40 flex items-center justify-center flex-shrink-0">
+                                    <i class="fab fa-linkedin-in text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm font-mono">LINKEDIN</p>
+                                    <p class="text-white font-medium">mahmud-abdullah-webdev</p>
+                                    <p class="text-gray-500 text-xs">Let's connect</p>
+                                </div>
+                            </div>
+                            <!-- Facebook -->
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-indigo-900/40 flex items-center justify-center flex-shrink-0">
+                                    <i class="fab fa-facebook-f text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm font-mono">FACEBOOK</p>
+                                    <p class="text-white font-medium">abdullahalmahmud1997</p>
+                                    <p class="text-gray-500 text-xs">Say hi!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: Contact Form -->
+                    <div>
+                        <form action="#" method="POST" class="space-y-5">
+                            <!-- YOUR NAME -->
+                            <div>
+                                <label class="block text-gray-300 text-sm font-medium mb-1">YOUR NAME</label>
+                                <input type="text" value="Abdullah Al Mahmud"
+                                    class="w-full bg-gray-900/50 border border-indigo-800/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+                            </div>
+                            <!-- YOUR EMAIL -->
+                            <div>
+                                <label class="block text-gray-300 text-sm font-medium mb-1">YOUR EMAIL</label>
+                                <input type="email" value="you@example.com"
+                                    class="w-full bg-gray-900/50 border border-indigo-800/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+                            </div>
+                            <!-- MESSAGE -->
+                            <div>
+                                <label class="block text-gray-300 text-sm font-medium mb-1">MESSAGE</label>
+                                <textarea rows="4"
+                                    class="w-full bg-gray-900/50 border border-indigo-800/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">Hi Abdullah, I'd like to work with you on...</textarea>
+                            </div>
+                            <!-- Send Message Button -->
+                            <div>
+                                <button type="submit"
+                                    class="btn-gradient w-full sm:w-auto px-8 py-3 rounded-full text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+                                    Send Message <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <!-- Required fields note -->
+                            <p class="text-gray-500 text-xs font-mono pt-2">CONTACT — ALL FIELDS <span
+                                    class="text-red-400">*required</span></p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- bottom decorative line (optional) -->
+                <div class="mt-12 pt-4 text-center text-gray-500 text-xs border-t border-indigo-900/40">
+                    <i class="fas fa-reply-all mr-1"></i> I'll get back to you within 24 hours
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ========== FOOTER SECTION (with Social Links) ========== -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-8 md:pb-12">
+        <div
+            class="glass-footer rounded-3xl overflow-hidden border border-indigo-800/30 bg-gray-900/30 backdrop-blur-sm">
+            <div class="p-6 md:p-10 lg:p-12">
+
+                <!-- Main footer content: 4 columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Column 1: Logo + tagline -->
+                    <div class="lg:col-span-1">
+                        <div class="mb-4">
+                            <span class="text-4xl md:text-5xl font-extrabold tracking-tight gradient-logo">RAFI</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            MERN Stack Developer turning ideas into production-ready web applications.
+                        </p>
+
+
+                        <div class="flex gap-3 mt-3">
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-gray-800/60 hover:bg-indigo-600 flex items-center justify-center transition-all duration-300">
+                                <i class="fab fa-github text-gray-300 hover:text-white text-sm"></i>
+                            </a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-gray-800/60 hover:bg-indigo-600 flex items-center justify-center transition-all duration-300">
+                                <i class="fab fa-linkedin-in text-gray-300 hover:text-white text-sm"></i>
+                            </a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-gray-800/60 hover:bg-indigo-600 flex items-center justify-center transition-all duration-300">
+                                <i class="fab fa-twitter text-gray-300 hover:text-white text-sm"></i>
+                            </a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-gray-800/60 hover:bg-indigo-600 flex items-center justify-center transition-all duration-300">
+                                <i class="fab fa-facebook-f text-gray-300 hover:text-white text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: NAVIGATE -->
+                    <div>
+                        <h4 class="text-indigo-300 font-mono text-sm mb-3">// NAVIGATE</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition text-sm">About</a>
+                            </li>
+                            <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition text-sm">Projects</a>
+                            </li>
+                            <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition text-sm">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: GET IN TOUCH -->
+                    <div>
+                        <h4 class="text-indigo-300 font-mono text-sm mb-3">// GET IN TOUCH</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition text-sm">Skills</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-gray-300 hover:text-indigo-400 transition text-sm">Experience</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition text-sm">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact + availability badge + SOCIAL LINKS -->
+                    <div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-gray-300 text-sm break-all">
+                                <i class="fas fa-envelope text-indigo-400 w-5"></i>
+                                <a href="mailto:citlassmahmud@gmail.com"
+                                    class="hover:text-indigo-400 transition">citlassmahmud@gmail.com</a>
+                            </p>
+                            <p class="text-gray-300 text-sm">
+                                <i class="fas fa-phone-alt text-indigo-400 w-5"></i> +880 1683 367535
+                            </p>
+                            <p class="text-gray-300 text-sm">
+                                <i class="fas fa-map-marker-alt text-indigo-400 w-5"></i> Dhaka, Bangladesh
+                            </p>
+                        </div>
+                        <a href="#"
+                            class="inline-block px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium border border-emerald-500/30 hover:bg-emerald-500/30 transition mb-4">
+                            available for work
+                        </a>
+
+                        <!-- Social Links (GitHub, LinkedIn, Twitter, Facebook) -->
+
+                    </div>
+                </div>
+
+                <!-- Bottom bar: copyright + tech stack -->
+                <div
+                    class="mt-10 pt-6 border-t border-indigo-800/30 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
+                    <p>© 2026 Abdullah Al Mahmud. All rights reserved.</p>
+                    <p class="flex items-center gap-2">
+                        <span>Build with</span>
+                        <span class="text-indigo-300">Next.js</span>
+                        <span class="text-gray-600">|</span>
+                        <span class="text-indigo-300">Tailwind CSS</span>
+                        <span class="text-gray-600">|</span>
+                        <span class="text-indigo-300">HeroUI</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function () {
+            const menuBtn = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    const isClosed = mobileMenu.classList.contains('mobile-menu-closed');
+                    if (isClosed) {
+                        mobileMenu.classList.remove('mobile-menu-closed');
+                        mobileMenu.classList.add('mobile-menu-open');
+                    } else {
+                        mobileMenu.classList.remove('mobile-menu-open');
+                        mobileMenu.classList.add('mobile-menu-closed');
+                    }
+                });
+            }
+            function handleResize() {
+                if (window.innerWidth >= 768 && mobileMenu) {
+                    if (!mobileMenu.classList.contains('mobile-menu-closed')) {
+                        mobileMenu.classList.add('mobile-menu-closed');
+                        mobileMenu.classList.remove('mobile-menu-open');
+                    }
+                }
+            }
+            window.addEventListener('resize', handleResize);
+            handleResize();
+        })();
+
+
+        (function () {
+            // Get all FAQ items
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            // For each item, set up the button and answer
+            faqItems.forEach((item, index) => {
+                const questionBtn = item.querySelector('.faq-question');
+                const answerDiv = item.querySelector('.faq-answer');
+                const iconSpan = item.querySelector('.faq-icon i');
+
+                // Initially: first item open, others closed
+                if (index === 0) {
+                    answerDiv.style.maxHeight = answerDiv.scrollHeight + "px";
+                    if (iconSpan) {
+                        iconSpan.classList.remove('fa-plus');
+                        iconSpan.classList.add('fa-minus');
+                    }
+                } else {
+                    answerDiv.style.maxHeight = "0px";
+                    if (iconSpan) {
+                        iconSpan.classList.remove('fa-minus');
+                        iconSpan.classList.add('fa-plus');
+                    }
+                }
+
+                // Add click event
+                questionBtn.addEventListener('click', () => {
+                    const isOpen = answerDiv.style.maxHeight !== "0px";
+
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherIcon = otherItem.querySelector('.faq-icon i');
+                            otherAnswer.style.maxHeight = "0px";
+                            if (otherIcon) {
+                                otherIcon.classList.remove('fa-minus');
+                                otherIcon.classList.add('fa-plus');
+                            }
+                        }
+                    });
+
+                    // Toggle current item
+                    if (isOpen) {
+                        answerDiv.style.maxHeight = "0px";
+                        if (iconSpan) {
+                            iconSpan.classList.remove('fa-minus');
+                            iconSpan.classList.add('fa-plus');
+                        }
+                    } else {
+                        answerDiv.style.maxHeight = answerDiv.scrollHeight + "px";
+                        if (iconSpan) {
+                            iconSpan.classList.remove('fa-plus');
+                            iconSpan.classList.add('fa-minus');
+                        }
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
